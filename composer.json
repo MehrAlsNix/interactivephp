@@ -24,8 +24,10 @@
         "zendframework/zend-stdlib": "^2.7 || ^3.0",
         "zendframework/zend-expressive-zendrouter": "^1.0",
         "zendframework/zend-servicemanager": "^2.7.3 || ^3.0",
+        "zendframework/zend-form": "^2.9",
         "ocramius/proxy-manager": "^1.0 || ^2.0",
-        "zendframework/zend-expressive-twigrenderer": "^1.0"
+        "zendframework/zend-expressive-zendviewrenderer": "^1.1",
+        "symfony/console": "^3.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
@@ -34,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/App/"
+            "MehrAlsNix\\InteractivePhp\\": "src/InteractivePhp/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "AppTest\\": "test/AppTest/"
+            "MehrAlsNix\\InteractivePhp\\Test\\": "test/InteractivePhp/"
         }
     },
     "scripts": {

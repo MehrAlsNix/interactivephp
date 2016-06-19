@@ -1,8 +1,8 @@
 <?php
 
-namespace AppTest\Action;
+namespace MehrAlsNix\InteractivePhp\Test\Action;
 
-use App\Action\HomePageAction;
+use MehrAlsNix\InteractivePhp\Action\HomePageAction;
 use Zend\Diactoros\Response;
 use Zend\Diactoros\ServerRequest;
 use Zend\Expressive\Router\RouterInterface;

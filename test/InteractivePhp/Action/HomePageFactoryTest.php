@@ -1,6 +1,6 @@
 <?php
 
-namespace AppTest\Action;
+namespace MehrAlsNix\InteractivePhp\Test\Action;
 
 use App\Action\HomePageAction;
 use App\Action\HomePageFactory;

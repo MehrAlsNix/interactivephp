@@ -1,12 +1,18 @@
 <?php
 
+use MehrAlsNix\InteractivePhp\Action\CommandExecutorAction;
+use MehrAlsNix\InteractivePhp\Action\CommandExecutorFactory;
+use MehrAlsNix\InteractivePhp\Action\HomePageAction;
+use MehrAlsNix\InteractivePhp\Action\HomePageFactory;
+
 return [
     'dependencies' => [
         'invokables' => [
             Zend\Expressive\Router\RouterInterface::class => Zend\Expressive\Router\ZendRouter::class,
         ],
         'factories' => [
-            App\Action\HomePageAction::class => App\Action\HomePageFactory::class,
+            HomePageAction::class => HomePageFactory::class,
+            CommandExecutorAction::class => CommandExecutorFactory::class,
         ],
     ],
 
@@ -14,7 +20,13 @@ return [
         [
             'name' => 'home',
             'path' => '/',
-            'middleware' => App\Action\HomePageAction::class,
+            'middleware' => HomePageAction::class,
+            'allowed_methods' => ['GET'],
+        ],
+        [
+            'name' => 'command-executor',
+            'path' => '/command-executor',
+            'middleware' => CommandExecutorAction::class,
             'allowed_methods' => ['GET'],
         ]
     ],
