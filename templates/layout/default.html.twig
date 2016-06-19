@@ -12,6 +12,7 @@
         .app { display: flex; min-height: 100vh; flex-direction: column; }
         .app-content { flex: 1; }
         .app-footer { padding-bottom: 1em; }
+        .navbar { background-color: #eeeeee; }
         .zf-green, h2 a { color: #68b604; }
     </style>
     {% block stylesheets %}{% endblock %}
@@ -27,27 +28,8 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="{{ path('home') }}">
-                        <img src="{{ asset('zf-logo.png') }}" alt="Zend Expressive" />
+                        <img width="30px" src="{{ asset('man-logo.png') }}" alt="MehrAlsNix" />
                     </a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="https://zendframework.github.io/zend-expressive/" target="_blank">
-                                <i class="fa fa-book"></i> Docs
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/zendframework/zend-expressive" target="_blank">
-                                <i class="fa fa-wrench"></i> Contribute
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ path('api.ping') }}">
-                                Ping Test
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </nav>
@@ -64,7 +46,7 @@
             <hr />
             {% block footer %}
                 <p>
-                    &copy; 2005 - {{ "now"|date("Y") }} by Zend Technologies Ltd. All rights reserved.
+                    &copy; 2015 - {{ "now"|date("Y") }} by MehrAlsNix. All rights reserved.
                 </p>
             {% endblock %}
         </div>
